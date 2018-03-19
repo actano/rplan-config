@@ -1,6 +1,6 @@
 {
   "name": "@rplan/config",
-  "version": "0.9.0",
+  "version": "1.0.0",
   "author": "Actano GmbH (https://rplan.com/)",
   "license": "MIT",
   "repository": {
@@ -46,5 +46,8 @@
   "files": [
     "lib",
     "src"
-  ]
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
 }
