@@ -1,0 +1,17 @@
+language: node_js
+node_js:
+- '8'
+- '9'
+cache: yarn
+script:
+- npm run ci
+deploy:
+  provider: npm
+  skip_cleanup: true
+  email: marcus.mennemeier@actano.de
+  on:
+    tags: true
+    repo: actano/rplan-config
+    node: '8'
+  api_key:
+    secure: CQ5jY651RvKkvz5FZOLpJ7326MMqZMYRH/sN7usXfG+tTIPGqyQEKsTbR4W28PGPbYXHpNkYWxymUina6dujt/jBaUqKS4OXO2BR3cDtl00HWpnVTZYSQxSbzGD8WiKc1cbFTurMTFznC6yCH9rylaixPuw16pxSwyqb44FgWtcda2Gdeu9infc23MKx7eAd1g0Cq7fNVJh634bLDbq1AWR4MMwKztFxt+SkTLKnt5pkoK1CeLLDUDzGxDCu7fDj49NAksmxYmokabAYAhKFOHeq8CBpal5P6R84y9RctBtZUtTVbLucZMWD0ys7meF7x5xR4clZ7YyVfznbmXcr7l9MVhzDQxBpVPZqzG0AibuOFsylpB6TXydTRB4BFN+k+FEsHYkfIR1fJqgAIasFdsxUt/Ek23uvgXOBoS7f20ciiqTjtWvqhPLVdMv2cRIoX2e7ku4AmABBsbT904LDkjqxHaEIJhhGBAFbDhZxR8mK4SCs3lSK8WXSbVbajDm3J6u+SCtWgt3bZOtIrhG8OOg6V7V3qc1JhxQkUUHaiIya9Zi9csXKkvpOONUBaYKcyU9USQ95hStduiQO6YHGCceIPGrIUM3jAcOxgCWx6nj+r/hDV0CvM+Q43PyDVUtPMrc/gs/X5t1mCPB+7Mm+fgxTE1+3wU2tkcrmoYQIbak=

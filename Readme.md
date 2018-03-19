@@ -1,5 +1,7 @@
 # rplan-config
 
+[![Build Status](https://travis-ci.org/actano/rplan-config.svg?branch=master)](https://travis-ci.org/actano/rplan-config)
+
 This is a reusable and stand-alone config module for RPLAN to provide an extensible configuration
 for the platform.
 
