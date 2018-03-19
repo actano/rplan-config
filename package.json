@@ -23,15 +23,22 @@
     "babel-preset-env": "^1.6.1",
     "babel-register": "^6.26.0",
     "chai": "^4.1.2",
+    "codecov": "^3.0.0",
     "eslint": "^4.19.0",
     "eslint-config-actano-base": "^3.0.0",
     "eslint-plugin-import": "^2.9.0",
-    "mocha": "^5.0.4"
+    "mocha": "^5.0.4",
+    "nyc": "^11.6.0"
   },
   "scripts": {
     "build": "babel --out-dir lib src",
     "ci": "npm run lint && npm run test",
-    "clean": "rm -rf lib",
+    "clean": "npm run clean:lib && npm run clean:coverage",
+    "clean:lib": "rm -rf lib",
+    "clean:coverage": "rm -rf coverage .nyc_output coverage.lcov",
+    "coverage": "npm run clean:coverage; nyc --reporter=text npm run test",
+    "coverage:codecov": "npm run coverage && nyc report --reporter=text-lcov > coverage.lcov && codecov",
+    "coverage:html": "npm run clean:coverage; nyc --reporter=html npm run test; open coverage/index.html",
     "lint": "eslint src test",
     "prepublishOnly": "npm run clean && npm run ci && npm run build",
     "test": "mocha test/src"
