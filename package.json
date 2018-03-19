@@ -1,0 +1,43 @@
+{
+  "name": "@rplan/config",
+  "version": "0.9.0",
+  "author": "Actano GmbH (https://rplan.com/)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/actano/rplan-config.git"
+  },
+  "main": "lib/index.js",
+  "module": "src/index.js",
+  "engines": {
+    "node": ">=8"
+  },
+  "dependencies": {
+    "nconf": "^0.10.0",
+    "nconf-yaml": "^1.0.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^8.2.2",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-preset-env": "^1.6.1",
+    "babel-register": "^6.26.0",
+    "chai": "^4.1.2",
+    "eslint": "^4.19.0",
+    "eslint-config-actano-base": "^3.0.0",
+    "eslint-plugin-import": "^2.9.0",
+    "mocha": "^5.0.4"
+  },
+  "scripts": {
+    "build": "babel --out-dir lib src",
+    "ci": "npm run lint && npm run test",
+    "clean": "rm -rf lib",
+    "lint": "eslint src test",
+    "prepublishOnly": "npm run clean && npm run ci && npm run build",
+    "test": "mocha test/src"
+  },
+  "files": [
+    "lib",
+    "src"
+  ]
+}

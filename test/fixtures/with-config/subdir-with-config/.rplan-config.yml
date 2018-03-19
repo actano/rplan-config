@@ -1,0 +1,4 @@
+foo: 10
+bar: 'Lorem Ipsum'
+nested:
+  object: 42

@@ -1,0 +1,5 @@
+foo: 2
+nested:
+  object:
+    withProperty: 'not a number'
+newProperty: 'is cool'

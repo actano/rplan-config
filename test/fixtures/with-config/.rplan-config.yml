@@ -1,0 +1,9 @@
+foo: 1
+bar: 'Hello World!'
+nested:
+  object:
+    withProperty: 42
+    andList:
+      - a
+      - b
+      - c

@@ -1,0 +1,7 @@
+foo: 3
+nested:
+  object:
+    andList:
+      - 1
+      - 2
+      - 3
