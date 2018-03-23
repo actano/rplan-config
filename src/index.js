@@ -1,5 +1,7 @@
 import { Provider } from 'nconf'
 import nconfYaml from 'nconf-yaml'
+import boolean from 'boolean'
+
 import findFile from './find-file'
 
 const CONFIG_FILE = '.rplan-config.yml'
@@ -35,5 +37,10 @@ nconf.add('default-config', {
   format: nconfYaml,
   file: findFile(CONFIG_FILE, process.cwd()),
 })
+
+/* get a value from config and convert it to boolean,
+   uses https://www.npmjs.com/package/boolean for the conversion
+ */
+nconf.getBoolean = configKey => boolean(nconf.get(configKey))
 
 export default nconf

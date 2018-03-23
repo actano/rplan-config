@@ -1,0 +1,13 @@
+boolean:
+  trueBoolean: true
+  trueString: 'true'
+  trueStringUppercase: 'TRUE'
+  yesString: 'yes'
+  trueNumber: 1
+  trueNumberString: '1'
+  falseBoolean: false
+  falseString: 'false'
+  falseStringUppercase: 'FALSE'
+  noString: 'no'
+  falseNumber: 0
+  falseNumberString: '0'

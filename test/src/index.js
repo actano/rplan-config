@@ -141,4 +141,28 @@ describe('rplan-config', () => {
       ),
     ),
   )
+
+  describe(
+    'getBoolean',
+    withCWD('test/fixtures/boolean-values-config', () => {
+      let config
+      beforeEach(() => {
+        config = requireNoCache('../../src/index')
+      })
+      it('should return the correct boolean value', () => {
+        expect(config.getBoolean('boolean:trueBoolean')).to.equal(true)
+        expect(config.getBoolean('boolean:trueString')).to.equal(true)
+        expect(config.getBoolean('boolean:trueStringUppercase')).to.equal(true)
+        expect(config.getBoolean('boolean:yesString')).to.equal(true)
+        expect(config.getBoolean('boolean:trueNumber')).to.equal(true)
+        expect(config.getBoolean('boolean:trueNumberString')).to.equal(true)
+        expect(config.getBoolean('boolean:falseBoolean')).to.equal(false)
+        expect(config.getBoolean('boolean:falseString')).to.equal(false)
+        expect(config.getBoolean('boolean:falseStringUppercase')).to.equal(false)
+        expect(config.getBoolean('boolean:noString')).to.equal(false)
+        expect(config.getBoolean('boolean:falseNumber')).to.equal(false)
+        expect(config.getBoolean('boolean:falseNumberString')).to.equal(false)
+      })
+    }),
+  )
 })
