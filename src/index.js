@@ -43,4 +43,6 @@ nconf.add('default-config', {
  */
 nconf.getBoolean = configKey => boolean(nconf.get(configKey))
 
+nconf.getModuleConfig = moduleId => nconf.get(`module:${moduleId}`) || {}
+
 export default nconf

@@ -165,4 +165,35 @@ describe('rplan-config', () => {
       })
     }),
   )
+
+  describe(
+    'getModuleConfig',
+    withCWD('test/fixtures/module-config', () => {
+      let config
+
+      beforeEach(() => {
+        config = requireNoCache('../../src/index')
+      })
+
+      it('should return the config of the requested module', () => {
+        const configFoo = config.getModuleConfig('foo')
+        const configBar = config.getModuleConfig('bar')
+
+        expect(configFoo).to.deep.equal({
+          hello: 'world',
+          nested: {
+            value: 10,
+          },
+        })
+
+        expect(configBar).to.deep.equal({
+          answer: 42,
+        })
+      })
+
+      it('should return empty object when no config for the requested module exists', () => {
+        expect(config.getModuleConfig('myModule')).to.deep.equal({})
+      })
+    }),
+  )
 })

@@ -1,0 +1,8 @@
+module:
+  foo:
+    hello: 'world'
+    nested:
+      value: 10
+
+  bar:
+    answer: 42
