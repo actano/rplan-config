@@ -1,4 +1,4 @@
 declare module "@rplan/config" {
-  import { Provider } = require('nconf')
-  export default Provider
+  import nconf = require('nconf')
+  export default nconf.Provider
 }
