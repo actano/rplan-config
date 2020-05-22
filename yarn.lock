@@ -87,6 +87,11 @@
     lodash "^4.2.0"
     to-fast-properties "^2.0.0"
 
+"@types/nconf@^0.10.0":
+  version "0.10.0"
+  resolved "https://registry.yarnpkg.com/@types/nconf/-/nconf-0.10.0.tgz#a5c9753a09c59d44c8e6dc94b57d73f70eb12ebe"
+  integrity sha512-Qh0/DWkz7fQm5h+IPFBIO5ixaFdv86V6gpbA8TPA1hhgXYtzGviv9yriqN1B+KTtmLweemKZD5XxY1cTAQPNMg==
+
 abbrev@1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/abbrev/-/abbrev-1.1.1.tgz#f8f2c887ad10bf67f634f005b6987fed3179aac8"
