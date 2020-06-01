@@ -30,7 +30,7 @@
     "eslint-config-actano-base": "^5.0.0",
     "eslint-plugin-import": "^2.17.3",
     "mocha": "^5.0.4",
-    "nyc": "^11.6.0"
+    "nyc": "^15.1.0"
   },
   "scripts": {
     "build": "babel --out-dir lib src",
