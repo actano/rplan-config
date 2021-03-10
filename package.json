@@ -10,7 +10,7 @@
   "main": "lib/index.js",
   "module": "src/index.js",
   "engines": {
-    "node": ">=8"
+    "node": ">=10"
   },
   "dependencies": {
     "boolean": "^3.0.2",
