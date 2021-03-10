@@ -1,6 +1,6 @@
 import { Provider } from 'nconf'
 import nconfYaml from 'nconf-yaml'
-import boolean from 'boolean'
+import { boolean } from 'boolean'
 
 import findFile from './find-file'
 
